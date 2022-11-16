@@ -1,0 +1,11 @@
+<main class="app flex-container align-center-middle">
+  <form class="login">
+    <h1 class="login__title">Login</h1>
+    <input type="text" name="username" id="username" placeholder="Usuario" class="login__field" [(ngModel)]="username">
+    <input type="password" name="password" id="password" placeholder="Contraseña" class="login__field" [(ngModel)]="password">
+    <button type="submit" class="button login__button login__button--sign-in" (click)="login()">Entrar</button>
+    <button class="button login__button login__button--sign-google">Entrar con Google</button>
+    <button class="button login__button login__button--sign-guest">Entrar como invitado</button>
+    <span class="display-block text-login">{{ textLogin }}</span>
+  </form>
+</main>
