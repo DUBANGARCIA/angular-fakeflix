@@ -7,8 +7,8 @@
     <button class="button login__button login__button--sign-google">Entrar con Google</button>
     <button class="button login__button login__button--sign-guest">Entrar como invitado</button>
     <span class="display-block text-login">{{ textLogin }}</span>
-    <div> username: {{ username.status }} </div>
-    <div> password: {{ password.status }} </div>
+    <span> {{ username.status }} </span>
+    <span> {{ password.status }} </span>
   </form>
 </main> -->
 <main class="app flex-container align-center-middle">
@@ -20,6 +20,6 @@
     <button class="button login__button login__button--sign-google">Entrar con Google</button>
     <button class="button login__button login__button--sign-guest">Entrar como invitado</button>
     <span class="display-block text-login">{{ textLogin }}</span>
-    <div> {{ loginForm.status }} </div>
+    <span> {{ loginForm.status }} </span>
   </form>
 </main>

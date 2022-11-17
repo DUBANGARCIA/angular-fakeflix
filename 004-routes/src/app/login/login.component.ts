@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -16,9 +17,14 @@ export class LoginComponent {
     password: new FormControl('', [Validators.required]),
   });
 
+  constructor(private router: Router) {
+
+  }
+
   login() {
-    if (this.loginForm.value.username  === 'usuario@email.com' && this.loginForm.value.password.value === 'password') {
-      this.textLogin = 'Has logrado entrar!!!';
+    if (this.loginForm.value.username  === 'usuario@email.com' && this.loginForm.value.password === 'password') {
+      this.textLogin = '';
+      this.router.navigate(['/home']);
     } else {
       this.textLogin = 'No estás autorizado para ingresar';
     }
